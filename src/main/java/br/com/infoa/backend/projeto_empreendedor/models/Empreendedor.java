@@ -1,4 +1,4 @@
-package br.com.infoa.backend.projeto_empreendedor.models;
+ package br.com.infoa.backend.projeto_empreendedor.models;
 
 import java.util.List;
 
@@ -38,8 +38,8 @@ public class Empreendedor {
       @ManyToMany
     @JoinTable (
         name = "empreendedor_produto",
-        joinColumns = @JoinColumn(name = "id_empreendedor"),
-        inverseJoinColumns = @JoinColumn(name = "id_produto")
+        joinColumns = @JoinColumn(name = "id_empreendedor" , referencedColumnName = "id"),
+        inverseJoinColumns = @JoinColumn(name = "id_produto" , referencedColumnName = "id")
     )
     private List<Produto> produtos;
 

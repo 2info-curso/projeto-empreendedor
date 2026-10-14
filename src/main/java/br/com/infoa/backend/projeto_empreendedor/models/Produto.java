@@ -1,6 +1,5 @@
 package br.com.infoa.backend.projeto_empreendedor.models;
 
-
 import java.util.List;
 
 import jakarta.persistence.Column;
@@ -30,11 +29,11 @@ public class Produto {
     @Column (name = "preco")
     private Double preco;
 
-@ManyToMany 
+    @ManyToMany 
     @JoinTable (
         name = "empreendedor_produto", 
-        joinColumns = @JoinColumn(name = "id_produto"),
-        inverseJoinColumns = @JoinColumn(name = "id_empreendedor") 
+        joinColumns = @JoinColumn(name = "id_produto" , referencedColumnName = "id"),
+        inverseJoinColumns = @JoinColumn(name = "id_empreendedor" , referencedColumnName = "id") 
     )
     private List<Empreendedor> empreendedores;
 

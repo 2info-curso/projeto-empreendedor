@@ -32,8 +32,8 @@ public class Endereco {
      @ManyToMany
     @JoinTable (
         name = "empreendedor_produto",
-        joinColumns = @JoinColumn(name = "id_empreendedor"),
-        inverseJoinColumns = @JoinColumn(name = "id_produto")
+        joinColumns = @JoinColumn(name = "id_empreendedor" , referencedColumnName = "id"),
+        inverseJoinColumns = @JoinColumn(name = "id_produto" , referencedColumnName = "id")
     )
     private List<Produto> produtos;
 

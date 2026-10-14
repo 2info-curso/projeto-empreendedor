@@ -1,0 +1,18 @@
+package br.com.infoa.backend.projeto_empreendedor.configs;
+
+import org.springframework.context.annotation.Configuration;
+
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import io.swagger.v3.oas.annotations.info.Info;
+
+@Configuration
+@OpenAPIDefinition(
+    info = @Info(
+        title = "Gamer Planet",
+        version = "1.0",
+        description = "API para aloja que venda produtos gamers. video-game, acessórios, periféricos, etc."
+    )
+)
+public class Swagger {
+
+}
